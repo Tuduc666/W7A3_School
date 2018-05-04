@@ -7,7 +7,9 @@ public class OracleQueries {
 	public final static String GETINSTRUCTORBYEMAIL = "select * from instructor "
 			+ "where email = ?";	
 	public final static String GETALLCOURSES = "select * from course";
-	
+	public final static String GETCOURSESBYINSTRUCTOR = "select c.COURSE_ID,c.COURSE_NAME,c.MINIMUN_GPA from TEACHING " 
+			+ "join COURSE c on t.COURSE_ID = c.COURSE_ID "  
+			+ "where INSTRUCTOR_ID = ?";
 	
 	
 	

@@ -7,5 +7,5 @@ import w7a3_School_JDBC.Models.Course;
 
 public interface CourseDAOI {
 	public List<Course> getAllCourses() throws IOException, SQLException;
-	public List<Course> getCourseByInstructor(int instructor_id);
+	public List<Course> getCourseByInstructor(int instructor_id) throws IOException, SQLException;
 }
