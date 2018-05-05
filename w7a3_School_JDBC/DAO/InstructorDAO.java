@@ -78,7 +78,10 @@ public class InstructorDAO implements InstructorDAOI {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-			result.close();
+			
+			if(result != null) {
+				result.close();
+			}
 			if(stmt != null) {
 				stmt.close();
 			}
@@ -87,5 +90,16 @@ public class InstructorDAO implements InstructorDAOI {
 			}
 		}	
 		return instructor;
+	}
+	
+	public String validateUser(Instructor ins, String comparablePass) 	{ 		
+		String role="Wrong Credentials";          // default
+		
+		if(ins.getPass().equals(comparablePass)) {
+			if(ins.getInstructor_role()==1) role="Admin";
+			else if(ins.getInstructor_role()==0) role="Instructor";
+			else role="You have an invalid Instructor Role";
+		}
+		return role;      
 	}
 }

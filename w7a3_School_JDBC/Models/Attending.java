@@ -1,43 +1,43 @@
 package w7a3_School_JDBC.Models;
 
 public class Attending {
-	private int attending_id;
-	private int course_id;
-	private int student_id;
+	private String course_name;   
+	private String full_name;
+	private String email;
 	
+	public Attending(String course_name, String full_name, String email) {
+		this.course_name = course_name;
+		this.full_name = full_name;
+		this.email = email;
+	}
+
 	public Attending() {
-		this.attending_id = 0;
-		this.course_id = 0;
-		this.student_id = 0;
-	}
-	
-	public Attending(int attending_id, int course_id, int student_id) {
-		this.attending_id = attending_id;
-		this.course_id = course_id;
-		this.student_id = student_id;
+		this.course_name = " ";
+		this.full_name = " ";
+		this.email = " ";
 	}
 
-	public int getAttending_id() {
-		return attending_id;
+	public String getCourse_name() {
+		return course_name;
 	}
 
-	public void setAttending_id(int attending_id) {
-		this.attending_id = attending_id;
+	public void setCourse_name(String course_name) {
+		this.course_name = course_name;
 	}
 
-	public int getCourse_id() {
-		return course_id;
+	public String getFull_name() {
+		return full_name;
 	}
 
-	public void setCourse_id(int course_id) {
-		this.course_id = course_id;
+	public void setFull_name(String full_name) {
+		this.full_name = full_name;
 	}
 
-	public int getStudent_id() {
-		return student_id;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setStudent_id(int student_id) {
-		this.student_id = student_id;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

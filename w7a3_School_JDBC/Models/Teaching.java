@@ -1,43 +1,54 @@
 package w7a3_School_JDBC.Models;
 
 public class Teaching {
-	private int teaching_id;
-	private int course_id;
-	private int instructor_id;
+	private String course_name;
+	private double minimum_gpa;     
+	private String full_name;
+	private String email;
 	
 	public Teaching() {
-		this.teaching_id = 0;
-		this.course_id = 0;
-		this.instructor_id = 0;
+		this.course_name = " ";
+		this.minimum_gpa = 0D;
+		this.full_name = " ";
+		this.email = " ";
 	}
 	
-	public Teaching(int teaching_id, int course_id, int instructor_id) {
-		this.teaching_id = teaching_id;
-		this.course_id = course_id;
-		this.instructor_id = instructor_id;
+	public Teaching(String course_name, double minimum_gpa, String full_name, String email) {
+		this.course_name = course_name;
+		this.minimum_gpa = minimum_gpa;
+		this.full_name = full_name;
+		this.email = email;
 	}
 
-	public int getTeaching_id() {
-		return teaching_id;
+	public String getCourse_name() {
+		return course_name;
 	}
 
-	public void setTeaching_id(int teaching_id) {
-		this.teaching_id = teaching_id;
+	public void setCourse_name(String course_name) {
+		this.course_name = course_name;
 	}
 
-	public int getCourse_id() {
-		return course_id;
+	public double getMinimum_gpa() {
+		return minimum_gpa;
 	}
 
-	public void setCourse_id(int course_id) {
-		this.course_id = course_id;
+	public void setMinimum_gpa(double minimum_gpa) {
+		this.minimum_gpa = minimum_gpa;
 	}
 
-	public int getInstructor_id() {
-		return instructor_id;
+	public String getFull_name() {
+		return full_name;
 	}
 
-	public void setInstructor_id(int instructor_id) {
-		this.instructor_id = instructor_id;
+	public void setFull_name(String full_name) {
+		this.full_name = full_name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

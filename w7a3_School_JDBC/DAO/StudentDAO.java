@@ -38,7 +38,10 @@ public class StudentDAO implements StudentDAOI {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-			result.close();
+
+			if(result != null) {
+				result.close();
+			}
 			if(stmt != null) {
 				stmt.close();
 			}
